@@ -1,0 +1,83 @@
+{% extends "layout/base.html" %}
+{% load static %}
+{% block title %}首页{% endblock %}
+{% block content %}
+    <div id="index_body">
+        <div class="index_Topic" id="index_Topic">
+            <h1>基于神经网络的PM2.5浓度分析与预测系统</h1>
+            <p>本系统是一个集成多个机器学习和深度学习的系统，致力于分析预测PM2.5浓度。</p>
+            <p>本系统基于Python和Django框架，采用前后端分离的架构，</p>
+            <p>前端使用HTML、CSS、JavaScript等语言，后端使用Python和Django框架。</p>
+
+        </div>
+        <div class="index_card-container" id="index_card_container">
+            <div class="index_card">
+                <div class="index_icon"><i class="fas fa-shield-alt"></i></div>
+                <h2>模型高效</h2>
+                <p>提供多种先进的机器学习和深度学习模型，满足不同领域的研究需求。</p>
+                <div class="index_tags">
+                    <span class="index_tag">先进</span>
+                    <span class="index_tag">高效</span>
+                    <span class="index_tag">专业</span>
+                </div>
+            </div>
+            <div class="index_card">
+                <div class="index_icon"><i class="fas fa-plane-departure"></i></div>
+                <h2>设计简洁</h2>
+                <p>界面设计简洁明了，操作流程清晰易懂，无需复杂的设置。</p>
+                <div class="index_tags">
+                    <span class="index_tag">简单</span>
+                    <span class="index_tag">便捷</span>
+                    <span class="index_tag">方便</span>
+                </div>
+            </div>
+            <div class="index_card">
+                <div class="index_icon"><i class="fas fa-puzzle-piece"></i></div>
+                <h2>科研利器</h2>
+                <p>强大的数据分析工具，丰富的可视化功能，使结果展示更加直观。</p>
+                <div class="index_tags">
+                    <span class="index_tag">科研</span>
+                    <span class="index_tag">学习</span>
+                    <span class="index_tag">创新</span>
+                </div>
+            </div>
+        </div>
+        <div class="index_Introduce" id="index_Introduce">
+            <div class="index_introduce_context">
+                <h3>数据模板</h3>
+                <table border="1" id="index_Introduce_table">
+                    <thead>
+                        <tr>
+                            {% for header in headers %}
+                                <th>{{ header }}</th>
+                            {% endfor %}
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for row in data %}
+                            <tr>
+                                {% for cell in row %}
+                                    <td>{{ cell }}</td>
+                                {% endfor %}
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            <br>
+            <button id="download-template-btn" data-url="{% static '/data_get/数据模板.xlsx' %}"><img src="{% static '/img/下载.png' %}" alt=""></img>获取模板</button>
+
+            </div>
+        </div>
+
+        <div class="index_Flowchart" id="index_Flowchart">
+            <div class="flowchart-item" id="CA_FC" data-url="{% static '/data_get/CA.gif' %}" onclick="showFlowchart('CA')">数据收集</div>
+            <div class="flowchart-item" id="RM_FC" onclick="showFlowchart('RM')">相关性分析</div>
+            <div class="flowchart-item" id="RD_FC" onclick="showFlowchart('RD')">因果性分析</div>
+            <div class="flowchart-item" id="PML_FC" onclick="showFlowchart('PML')">数据降维</div>
+            <div class="flowchart-item" id="PNN_FC" onclick="showFlowchart('PNN')">数据预测</div>
+        </div>
+        <div class="index_show_fc" id="index_show_fc">
+        <!-- 流程图或相关信息将在这里显示 -->
+        </div>
+    </div>
+{% endblock %}

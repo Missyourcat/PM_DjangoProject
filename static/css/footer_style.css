@@ -1,0 +1,47 @@
+/* 基本重置 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 底部样式 */
+#footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    font-size: 14px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-content {
+    width: 70%;
+}
+
+.footer-content p {
+    margin: 5px 0;
+}
+
+.footer-links {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.footer-links a {
+    margin: 5px;
+    display: inline-block;
+}
+
+.footer-links img {
+    height: 30px;
+    width: auto;
+}

@@ -1,0 +1,202 @@
+/* 限定在特定的ID和类上的样式 */
+#index_body {
+    max-width: 90%; /* 最大宽度 */
+    margin: 0 auto; /* 水平居中 */
+    padding: 20px; /* 内边距 */
+    background-color: rgba(244, 244, 244, 0.8); /* 半透明背景色 */
+    backdrop-filter: blur(10px); /* 毛玻璃模糊效果 */
+    border-radius: 10px; /* 可选：圆角 */
+}
+
+#index_Topic {
+    max-width: 100%;
+    /*margin: 0 auto;*/
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+#index_Topic h1 {
+    font-size: 2em;
+    color: #333;
+    text-align: center;
+}
+
+#index_Topic p {
+    color: #666;
+    text-align: center;
+}
+
+/*流程图*/
+#index_Flowchart {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.flowchart-item {
+    width: 18%; /* 调整宽度以适应间距 */
+    height: 100px;
+    border: 1px solid #ccc;
+    text-align: center;
+    line-height: 100px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: #f9f9f9; /* 背景色 */
+    border-radius: 5px; /* 圆角 */
+}
+
+.flowchart-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    background-color: #DDDDDD; /* 鼠标悬停时的深灰色背景 */
+}
+
+.index_show_fc {
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    min-height: 200px; /* 确保有足够的空间显示流程图 */
+    max-width: 100%;
+    text-align: center;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+/* 卡片样式 */
+.index_card-container {
+    max-width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+    gap: 2rem; /* 间距 */
+}
+
+.index_card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    width: calc((100% - 4rem) / 3); /* 调整卡片数量 */
+    text-align: center;
+}
+
+.index_card .index_icon i {
+    font-size: 3rem;
+    color: #ddd;
+    margin-bottom: 1rem;
+}
+
+.index_card h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.index_card p {
+    color: #777;
+    margin-bottom: 1rem;
+}
+
+.index_card .index_tags {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.index_card .index_tags .index_tag {
+    background-color: #eaeaea;
+    color: #333;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+}
+/*数据介绍*/
+#download-template-btn {
+    /*margin: 5px;*/
+    float: right;
+    max-width: 10%;
+    /*padding: 15px 30px;*/
+    font-size: 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#download-template-btn:hover {
+    background-color: #0056b3;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+}
+
+#download-template-btn:active {
+    background-color: #004c8c;
+    transform: scale(0.98);
+}
+#download-template-btn img {
+    /*text-align: center;*/
+    /*margin-bottom: 5%;*/
+    max-width: 15%;
+}
+#index_Introduce {
+    max-width: 100%;
+    margin: 15px auto;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.index_introduce_context {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+#index_Introduce_table {
+    width: 100%; /* 确保表格占据容器的全部宽度 */
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+#index_Introduce_table caption {
+    font-size: 1.0em; /* 调整标题字体大小 */
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+#index_Introduce_table thead tr {
+
+    background-color: #007BFF;
+    color: white;
+    text-align: left;
+}
+
+#index_Introduce_table th,
+#index_Introduce_table td {
+    /*max-width: 100%;*/
+    /*padding-left: 5px;*/
+    font-size: 0.7em;
+    text-align: center;
+    border: 1px solid #ddd;
+    /*text-align: left;*/
+}

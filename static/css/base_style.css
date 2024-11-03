@@ -1,0 +1,25 @@
+
+/* 容器 */
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* 至少占据整个视口的高度 */
+}
+
+/* header 样式 */
+header {
+  flex-shrink: 0; /* 防止 header 在内容较少时被压缩 */
+  /* 可以添加更多样式如背景色、内边距等 */
+}
+
+/* main 内容区 */
+main {
+  flex-grow: 1; /* 让主要内容区域占据剩余的空间 */
+  /* 这里可以添加更多的样式 */
+}
+
+/* footer 样式 */
+footer {
+  flex-shrink: 0; /* 防止 footer 被压缩 */
+  /* 可以添加更多样式如背景色、内边距等 */
+}

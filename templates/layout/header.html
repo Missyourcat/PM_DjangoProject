@@ -1,0 +1,74 @@
+{% load static %}
+<header id="header">
+    <nav class="navbar">
+        <ul class='ul_1'>
+            <li><a href="{% url 'index' %}">首页</a></li>
+            <li><a href="{% url 'describe' %}">描述性统计</a></li>
+            <li class="has-dropdown">
+                <a href="#">相关性分析</a>
+                <ul class="hide_ul_2">
+                    <li class="has-subdropdown">
+                        <a href="#">正态检验</a>
+                        <ul class="hide_ul_3">
+                            <li><a href="#">QQ图(数据非常大)</a></li>
+                            <li><a href="#">Shapiro-wilk检验(小样本3≤n≤50)</a></li>
+                            <li><a href="#">JB检验(大样本n>30)</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">皮尔逊相关系数</a></li>
+                    <li><a href="#">斯皮尔曼相关系数</a></li>
+                </ul>
+            </li>
+            <li class="has-dropdown">
+                <a href="#">因果性分析</a>
+                <ul class="hide_ul_2">
+                    <li><a href="#">逐步回归模型</a></li>
+                    <li><a href="#">多元线性模型</a></li>
+                </ul>
+            </li>
+            <li class="has-dropdown">
+                <a href="#">数据降维</a>
+                <ul class="hide_ul_2">
+                    <li><a href="#">主成分分析</a></li>
+                    <li><a href="#">因子分析</a></li>
+                </ul>
+            </li>
+            <li class="has-dropdown">
+                <a href="#">机器学习预测模型</a>
+                <ul class="hide_ul_2">
+                    <li><a href="#">ARIMA</a></li>
+                    <li><a href="#">XGBoost</a></li>
+                    <li><a href="#">随机森林</a></li>
+                    <li><a href="#">Prophet</a></li>
+                </ul>
+            </li>
+            <li class="has-dropdown">
+                <a href="#">神经网络预测模型</a>
+                <ul class="hide_ul_2">
+                    <li><a href="#">LSTM神经网络</a></li>
+                    <li><a href="#">BP神经网络</a></li>
+                    <li><a href="#">Transformer神经网络</a></li>
+                    <li><a href="#">CNN神经网络</a></li>
+                </ul>
+            </li>
+            <li class="has-dropdown">
+                <a href="#">集成模型</a>
+                <ul class="hide_ul_2">
+                    <li><a href="#">PCA—BP</a></li>
+                    <li><a href="#">EFA-LSTM</a></li>
+                </ul>
+            </li>
+        </ul>
+        <ul class="ul_2">
+            <form action="{% url 'index' %}" method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+                <input type="file" accept=".xlsx" id="fileInput" onchange="displayFileName(this)" name="file">
+                <div>
+                    <button type="submit">▶提交</button>
+{#                    <span id="fileName"></span>#}
+                </div>
+            </form>
+        </ul>
+    </nav>
+</header>
+

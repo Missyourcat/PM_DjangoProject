@@ -1,0 +1,137 @@
+body {
+    /*font-family: Arial, sans-serif;*/
+    margin: 0;
+    padding: 0;
+}
+
+#header {
+    background-color: #333;
+    padding: 10px 0;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+.ul_1, .ul_2 {
+    list-style-type: none; /* 去掉列表项前面的点 */
+    padding: 0;
+    margin: 0;
+}
+
+.ul_1 > li {
+    position: relative;
+    display: inline-block;
+    line-height: 40px;
+    height: 40px;
+    /*margin-right: 20px;*/
+}
+
+.ul_1 > li > a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    transition: color 0.3s; /* 添加颜色渐变效果 */
+}
+
+.ul_1 > li > a:hover {
+    color: #FFD700; /* 悬停时的颜色 */
+}
+
+.has-dropdown > a:after {
+    content: ' ▼'; /* 下箭头提示 */
+    font-size: 0.8em;
+}
+.has-subdropdown > a:after {
+    content: ' ▶'; /* 下箭头提示 */
+    font-size: 0.8em;
+}
+
+
+.hide_ul_2, .hide_ul_3 {
+    /*width: 180px;*/
+    padding: 15px 15px;
+    list-style-type: none;
+    display: none;
+    position: absolute;
+    background-color: #444;
+    min-width: 180px;
+    border: 1px solid #333;
+    z-index: 1;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.hide_ul_2 {
+    top: 100%; /* 二级菜单在一级菜单下方 */
+    left: 0;
+}
+
+.hide_ul_3 {
+    top: 0;
+    left: 100%; /* 三级菜单在二级菜单右侧 */
+}
+
+.hide_ul_2 li, .hide_ul_3 li {
+    white-space: nowrap;
+}
+
+.hide_ul_2 li a, .hide_ul_3 li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+    transition: color 0.3s; /* 添加颜色渐变效果 */
+}
+
+.hide_ul_2 li a:hover, .hide_ul_3 li a:hover {
+    color: #FFD700; /* 二级和三级菜单悬停时的颜色 */
+    background-color: #555;
+}
+
+input[type="file"] {
+    color: white;
+    background-color: #666;
+    width: 350px;
+    border: none;
+    padding: 8px;
+    cursor: pointer;
+    display: inline-block;
+}
+.ul_2 div {
+    display: inline-block;
+    vertical-align: middle;
+    /*width: 440px;*/
+    padding: 5px;
+}
+.ul_2 span {
+    display: inline-block;
+    vertical-align: middle;
+    padding: 5px;
+}
+.ul_2 button{
+    background-color: #f8f9fa; /* 浅蓝色 */
+    color: #343a40; /* 文字颜色 */
+    border: 1px solid #dee2e6; /* 边框 */
+    padding: 0.375rem 0.75rem; /* 内边距 */
+    font-size: 1rem; /* 字体大小 */
+    line-height: 1.2; /* 行高 */
+    border-radius: 0.25rem; /* 圆角 */
+    user-select: none; /* 不允许用户选中文本 */
+    touch-action: manipulation; /* 只允许触摸操作 */
+    cursor: pointer; /* 鼠标悬停时的手型光标 */
+    vertical-align: middle; /* 垂直居中 */
+    width: auto; /* 自动宽度 */
+    overflow-wrap: break-word; /* 单词自动换行 */
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out; /* 过渡动画 */
+}
+.ul_2 button:hover{
+    color: #212529; /* 鼠标悬停时的文字颜色 */
+    background-color: #e9ecef; /* 鼠标悬停时的背景颜色 */
+    border-color: #dae3e5; /* 鼠标悬停时的边框颜色 */
+}
+/* 显示下拉菜单 */
+.show {
+    display: block;
+}
